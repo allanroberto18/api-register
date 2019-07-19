@@ -7,6 +7,30 @@ services:
       - 9080:8080
     networks:
       - com_alr_register
+    depends_on:
+      - db
+      - adminer
+
+    db:
+      container_name: ${APP_NAME}-db
+      image: mariadb
+      ports:
+        - 3306:3306
+      networks:
+        - com_alr_register
+      environment:
+        MYSQL_DATABASE: example
+        MYSQL_ROOT_PASSWORD: example
+        MYSQL_USERNAME: example
+        MYSQL_PASSWORD:
+
+    adminer:
+      container_name: ${APP_NAME}-adminer
+      image: adminer
+      ports:
+        - 9081:8081
+      networks:
+        - com_alr_register
 
 networks:
   com_alr_register:
