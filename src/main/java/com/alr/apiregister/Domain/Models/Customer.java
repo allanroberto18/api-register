@@ -1,7 +1,7 @@
 package com.alr.apiregister.Domain.Models;
 
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -11,7 +11,7 @@ import javax.validation.constraints.*;
 @Table(name = "customer")
 @Getter
 @Setter
-@RequiredArgsConstructor
+@NoArgsConstructor
 public class Customer {
 
   @Id
@@ -21,12 +21,12 @@ public class Customer {
 
   @Column(name = "firstName", length = 125, nullable = false)
   @NotEmpty(message = "First name may not be empty")
-  @Size(min = 2, max = 125, message = "Name must be between 2 and 125 characters long")
+  @Size(min = 2, max = 125, message = "First name must be between 2 and 125 characters long")
   private String fistName;
 
   @Column(name = "lastName", length = 125, nullable = false)
   @NotEmpty(message = "Last name may not be empty")
-  @Size(min = 2, max = 125, message = "Name must be between 2 and 125 characters long")
+  @Size(min = 2, max = 125, message = "Last name must be between 2 and 125 characters long")
   private String lastName;
 
   @Column(name = "email", length = 125, nullable = false)
