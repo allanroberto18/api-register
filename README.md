@@ -1,5 +1,7 @@
 ## Customer Register API
 
+To start is necessary create your .env file for docker configurations (can use .env.dist as model)
+
 To deploy the application locally:
 
 ```
@@ -16,10 +18,10 @@ docker-compose -f stack.yml up
 
 ##### Access:
 
-**Locally access:** http://127.0.0.1:8080/api
-**Docker access:** http://127.0.0.1:9080/api
+* Locally access: http://127.0.0.1:8080/api
+* Docker access: http://127.0.0.1:9080/api
 
 ##### Endpoints available:
 
-[POST] - ${Local|Docker}/customers/
-[PARAMS] - {fistName, lastName, email}
+* [POST] - ${Local|Docker}/customers/
+* [PARAMS] - {fistName, lastName, email}

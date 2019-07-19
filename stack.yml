@@ -12,7 +12,7 @@ services:
       - com_alr_register
 
   db:
-    container_name: ${APP_NAME}-migration
+    container_name: ${APP_NAME}-mariadb
     image: mariadb
     ports:
       - 3306:3306
