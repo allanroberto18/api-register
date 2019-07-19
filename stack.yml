@@ -5,6 +5,30 @@ services:
     container_name: ${APP_NAME}-api
     ports:
       - 9080:8080
+    depends_on:
+      - db
+      - adminer
+    networks:
+      - com_alr_register
+
+  db:
+    container_name: ${APP_NAME}-migration
+    image: mariadb
+    ports:
+      - 3306:3306
+    networks:
+      - com_alr_register
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
+  adminer:
+    container_name: ${APP_NAME}-adminer
+    image: adminer
+    ports:
+      - 9081:8080
     networks:
       - com_alr_register
 
