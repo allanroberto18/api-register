@@ -23,5 +23,5 @@ docker-compose -f stack.yml up
 
 ##### Endpoints available:
 
-* [POST] - ${Local|Docker}/customers/
-* [PARAMS] - {fistName, lastName, email}
+* Locally access: http://127.0.0.1:8080/api/swagger-ui.html
+* Docker access: http://127.0.0.1:9080/api/swagger-ui.html
