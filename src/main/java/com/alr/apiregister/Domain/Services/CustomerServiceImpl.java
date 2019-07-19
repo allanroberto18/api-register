@@ -1,6 +1,5 @@
 package com.alr.apiregister.Domain.Services;
 
-import com.alr.apiregister.Applications.Builders.CustomerBuilder;
 import com.alr.apiregister.Applications.Interfaces.DTOs.CustomerDTO;
 import com.alr.apiregister.Domain.Interfaces.Services.CustomerService;
 import com.alr.apiregister.Domain.Models.Customer;
@@ -8,7 +7,6 @@ import com.alr.apiregister.Infrastructure.Repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @Component
