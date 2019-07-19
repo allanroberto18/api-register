@@ -68,6 +68,7 @@
                     </buildArgs>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -90,7 +91,13 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- Flyway Migration -->
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>5.2.4</version>
+            </plugin>
         </plugins>
     </build>
-
 </project>
